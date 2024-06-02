@@ -38,3 +38,6 @@ index.cssを以下に変更
 @tailwind utilities;
 
 ```
+
+## Redux + TypeScriptの設定
+https://redux.js.org/usage/usage-with-typescript
