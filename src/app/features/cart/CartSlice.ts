@@ -1,9 +1,10 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-interface CartItem {
-    id: string;
-    name: string;
+export interface CartItem {
+    id: string | number;
+    title: string;
     price: number;
+    img: string;
     amount: number;
 }
 
