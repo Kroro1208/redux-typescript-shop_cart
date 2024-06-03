@@ -1,32 +1,36 @@
 import { CartItem } from "./cart/CartSlice";
+import nikeImg1 from '../../assets/nike.jpg';
+import nikeImg2 from '../../assets/nike2.jpg';
+import nikeImg3 from '../../assets/nike3.jpg';
+import nikeImg4 from '../../assets/nike4.jpg';
 
 export const Products: CartItem[] = [
     {
         id: 1,
         title: 'Off White',
         price: 25000,
-        img: "/nike.jpg",
+        img: nikeImg1,
         amount: 1
     },
     {
         id: 2,
         title: 'Blue Impulse',
         price: 18500,
-        img: "/nike2.jpg",
+        img: nikeImg2,
         amount: 1
     },
     {
         id: 3,
         title: 'Picasso',
         price: 13000,
-        img: "/nike3.jpg",
+        img: nikeImg3,
         amount: 1
     },
     {
         id: 4,
         title: 'Run Magic',
         price: 15500,
-        img: "/nike4.jpg",
+        img: nikeImg4,
         amount: 1
     }
 ];
