@@ -4,7 +4,7 @@ import CartItem from './CartItem';
 import { openModal } from '../app/features/modal/ModalSlice';
 import emptyCartImage from "../assets/happy.gif"
 
-export const CartContainer = () => {
+export const CartContainer: React.FC = () => {
     const dispatch = useDispatch();
     const { amount, cartItems, total } = useSelector((state: RootState) => ({
         amount: state.cart.amount,

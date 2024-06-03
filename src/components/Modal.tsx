@@ -2,7 +2,7 @@ import { useDispatch } from 'react-redux';
 import { clearCart } from '../app/features/cart/CartSlice';
 import { closeModal } from '../app/features/modal/ModalSlice';
 
-export const Modal = () => {
+export const Modal: React.FC = () => {
   const dispatch = useDispatch();
 
   return (
