@@ -1,8 +1,8 @@
-import { CartItem } from "./cart/CartSlice";
 import nikeImg1 from '../../assets/nike.jpg';
 import nikeImg2 from '../../assets/nike2.jpg';
 import nikeImg3 from '../../assets/nike3.jpg';
 import nikeImg4 from '../../assets/nike4.jpg';
+import { CartItem } from '../type';
 
 export const Products: CartItem[] = [
     {
