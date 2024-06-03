@@ -1,16 +1,26 @@
-import { MinusIcon } from "./components/icons/MinusIcon"
-import { PlusIcon } from "./components/icons/PlusIcon"
-import { TrashIcon } from "./components/icons/TrashIcon"
+import { useDispatch, useSelector } from "react-redux"
+import { CartContainer } from "./components/CartContainer"
+import { useEffect } from "react"
+import { calculateTotals } from "./app/features/cart/CartSlice"
+import { Modal } from "./components/Modal"
+import NavBar from "./components/NavBar"
+import { RootState } from "./app/store"
 
 function App() {
+  const dispatch = useDispatch();
+  const cartItems  = useSelector((state: RootState) => ({ cartItems: state.cart.cartItems}) );
+  const isOpen = useSelector((state: RootState) => ({ isOpen: state.modal.isOpen}));
+
+  useEffect(() => {
+    dispatch(calculateTotals());
+  }, [cartItems, dispatch]);
+
   return (
-    <div className='text-4xl font-bold'>
-      <div>
-        <PlusIcon />
-        <MinusIcon />
-        <TrashIcon />
-      </div>
-    </div>
+    <main>
+      {isOpen && <Modal />}
+      <NavBar />
+      <CartContainer />
+    </main>
   )
 }
 

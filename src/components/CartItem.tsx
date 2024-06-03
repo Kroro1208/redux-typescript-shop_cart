@@ -2,6 +2,7 @@ import { useDispatch } from 'react-redux';
 import { PlusIcon } from './icons/PlusIcon';
 import { MinusIcon } from './icons/MinusIcon';
 import { decrease, increase, removeItem } from '../app/features/cart/CartSlice';
+import { TrashIcon } from './icons/TrashIcon';
 
 type Props = {
     id: string | number;
@@ -19,7 +20,7 @@ const CartItem = ({ id, img, title, price, amount }: Props) => { // このCartIt
             <div>
                 <h4>{title}</h4>
                 <h4 className=''>{price}円</h4>
-                <button className='' onClick={() => dispatch(removeItem(id))}><DeleteIcon /></button>
+                <button className='' onClick={() => dispatch(removeItem(id))}><TrashIcon /></button>
             </div>
             <div className=''>
                 <button className='' onClick={() => dispatch(increase((id)))}>
