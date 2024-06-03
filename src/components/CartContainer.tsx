@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../app/store';
 import CartItem from './CartItem';
+import { openModal } from '../app/features/modal/ModalSlice';
 
 export const CartContainer = () => {
     const dispatch = useDispatch();
