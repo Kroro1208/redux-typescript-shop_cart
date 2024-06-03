@@ -15,9 +15,9 @@ export const CartContainer = () => {
 
     if (amount < 1) {
         return (
-            <section className='flex flex-col items-center justify-center min-h-screen bg-gray-100'>
-                <header className='text-center'>
-                    <img src={emptyCartImage} alt="Empty Cart" className="w-40 h-40 mb-4" />
+            <section className='flex flex-col items-center justify-center min-h-screen bg-gray-100 text-center'>
+                <header>
+                    <img src={emptyCartImage} alt="Empty Cart" className="w-40 h-40 mb-4 mx-auto" />
                     <h2 className='text-4xl font-bold text-gray-800 mb-2'>Your Cart is Empty</h2>
                     <h4 className='text-lg text-gray-600 mb-6'>Looks like you haven't added anything to your cart yet.</h4>
                     <button 
@@ -28,7 +28,7 @@ export const CartContainer = () => {
                     </button>
                 </header>
             </section>
-        )
+        );
     }
 
     return (
